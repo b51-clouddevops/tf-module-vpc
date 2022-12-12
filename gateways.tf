@@ -10,6 +10,11 @@ resource "aws_internet_gateway" "igw" {
 # Allocates EIP needed for ngw 
 resource "aws_eip" "ngw-eip" {
   vpc      = true
+
+  tags = {
+    Name = "robot-${var.ENV}-hgw"
+  }
+
 }
 
 
