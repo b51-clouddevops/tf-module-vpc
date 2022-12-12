@@ -9,3 +9,15 @@ resource "aws_subnet" "public" {
     Name = "${var.ENV}-subnet-${element(var.AZ, count.index)}"
   }
 }
+
+
+# Creates private subnets
+resource "aws_subnet" "private" {
+  count      = length(var.PRIVATE_SUBNET_CIDR) 
+  vpc_id     = aws_vpc.main.id
+  cidr_block = element(var.PRIVATE_SUBNET_CIDR, count.index)
+
+  tags = {
+    Name = "${var.ENV}-subnet-${element(var.AZ, count.index)}"
+  }
+}
