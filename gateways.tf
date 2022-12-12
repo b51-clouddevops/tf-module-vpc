@@ -8,9 +8,9 @@ resource "aws_internet_gateway" "igw" {
 }
 
 
-# Creates NAT Gateway
+# Creates NAT Gateway ; NAT GW Needs an elastic IP, so create an elastic ip
 resource "aws_nat_gateway" "ngw" {
-  allocation_id = aws_eip.example.id
+  allocation_id = aws_eip.???.id
   subnet_id     = aws_subnet.example.id
 
   tags = {
