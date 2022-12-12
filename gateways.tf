@@ -16,7 +16,7 @@ resource "aws_eip" "ngw-eip" {
 # Creates NAT Gateway ; NAT GW Needs an elastic IP, so create an elastic ip
 resource "aws_nat_gateway" "ngw" {
   allocation_id = aws_eip.ngw-eip.id
-  subnet_id     = aws_subnet.public.id
+  subnet_id     = aws_subnet.public.*.id[0]
 
   tags = {
     Name = "robot-${var.ENV}-igw"
