@@ -7,6 +7,11 @@ resource "aws_internet_gateway" "igw" {
   }
 }
 
+# Allocates EIP needed for ngw 
+resource "aws_eip" "ngw-eip" {
+  vpc      = true
+}
+
 
 # Creates NAT Gateway ; NAT GW Needs an elastic IP, so create an elastic ip
 resource "aws_nat_gateway" "ngw" {
