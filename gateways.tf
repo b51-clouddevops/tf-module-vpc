@@ -23,5 +23,5 @@ resource "aws_nat_gateway" "ngw" {
   }
 
 # This ensure, this ngw will only be created if the igw is created
-  depends_on = [aws_internet_gateway.example]
+  depends_on = [aws_internet_gateway.igw]
 }
