@@ -14,8 +14,9 @@ resource "aws_nat_gateway" "ngw" {
   subnet_id     = aws_subnet.example.id
 
   tags = {
-    Name = "gw NAT"
+    Name = "robot-${var.ENV}-igw"
   }
 
+# This ensure, this ngw will only be created if the igw is created
   depends_on = [aws_internet_gateway.example]
 }
