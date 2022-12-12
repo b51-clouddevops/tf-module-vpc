@@ -1,3 +1,4 @@
+# Creates Route Table
 resource "aws_route_table" "public-rt" {
   vpc_id = aws_vpc.main.id
 
@@ -15,5 +16,6 @@ resource "aws_route_table" "public-rt" {
   tags = {
     Name = "${var.ENV}-public-route-table"
   }
-  
 }
+
+# Attach the route table to public subnets
