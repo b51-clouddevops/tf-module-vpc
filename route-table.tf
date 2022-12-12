@@ -44,7 +44,7 @@ resource "aws_route_table" "private-rt" {
 }
 
 # Attach the route table to public subnets
-resource "aws_route_table_association" " "prv-rt-association"" {
+resource "aws_route_table_association" "prv-rt-association" {
   count          = length(aws_subnet.private.*.id) 
   subnet_id      = element(aws_subnet.private.*.id, count.index)
   route_table_id = aws_route_table.private-rt.id
