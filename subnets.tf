@@ -7,5 +7,3 @@ resource "aws_subnet" "public-subnet1" {
   }
 }
 
-
-}
