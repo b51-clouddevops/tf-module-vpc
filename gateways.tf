@@ -7,3 +7,4 @@ resource "aws_internet_gateway" "igw" {
     Name = "robot-${var.ENV}-igw"
   }
 }
+
