@@ -17,3 +17,11 @@ output "PUBLIC_SUBNET_ID" {
 output "PRIVATE_SUBNET_CIDR" {
     value = aws_subnet.private.*.cidr_block
 }
+
+output "PUBLIC_SUBNET_CIDR" {
+    value = aws_subnet.public.*.cidr_block
+}
+
+output "DEFAULT_VPC_ID" {
+    value  =  var.DEFAULT
+}
