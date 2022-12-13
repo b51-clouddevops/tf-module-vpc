@@ -49,3 +49,6 @@ resource "aws_route_table_association" "prv-rt-association" {
   subnet_id      = element(aws_subnet.private.*.id, count.index)
   route_table_id = aws_route_table.private-rt.id
 }
+
+
+# Adding the Route in Default VPC Route Table
