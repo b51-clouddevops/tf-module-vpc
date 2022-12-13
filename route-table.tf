@@ -51,4 +51,4 @@ resource "aws_route_table_association" "prv-rt-association" {
 }
 
 
-# Adding the Route in Default VPC Route Table
+# Adding the Route in Default VPC Route Table ( which is the peering connection to robot vpc)
