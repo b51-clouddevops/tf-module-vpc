@@ -1,4 +1,4 @@
-# 
+# Printing the outputs, will record the information in the statefile which can be later used by other components by reading the terraform-vpc statefile
 output "VPC_ID" {
     value = aws_vpc.main.id 
 }
