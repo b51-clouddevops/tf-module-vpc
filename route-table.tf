@@ -55,6 +55,5 @@ resource "aws_route_table_association" "prv-rt-association" {
 resource "aws_route" "r" {
   route_table_id            = var.DEFAULT_VPC_RT
   destination_cidr_block    = var.VPC_CIDR
-  vpc_peering_connection_id = "pcx-45ff3dc1"
-  depends_on                = [aws_route_table.testing]
+  vpc_peering_connection_id = aws_vpc_peering_connection.peer.id 
 }
