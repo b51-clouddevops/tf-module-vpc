@@ -10,6 +10,10 @@ output "PRIVATE_SUBNET_ID" {
     value = aws_subnet.private.*.id
 }
 
-output "PRIVATE_SUBNET_ID" {
+output "PUBLIC_SUBNET_ID" {
+    value = aws_subnet.public.*.id
+}
+
+output "PRIVATE_SUBNET_CIDR" {
     value = aws_subnet.private.*.id
 }
