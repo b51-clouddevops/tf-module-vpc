@@ -23,5 +23,9 @@ output "PUBLIC_SUBNET_CIDR" {
 }
 
 output "DEFAULT_VPC_ID" {
-    value  =  var.DEFAULT
+    value  =  var.DEFAULT_VPC_ID
+}
+
+output "DEFAULT_VPC_CIDR" {
+    value  =  var.DEFAULT_VPC_CIDR
 }
